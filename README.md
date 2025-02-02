@@ -51,23 +51,23 @@
     * Запускаем сервер Django
     * Переходим по адресу /api
     * Открываем приложение check 
-    * ![alt text](imageforreadme/checkimei.png)
+      ![alt text](imageforreadme/checkimei.png)
     * Вставляем IMEI в форму
-    * ![alt text](imageforreadme/send_request.png)
+      ![alt text](imageforreadme/send_request.png)
 
 2. Авторизация по JWT - токену
     * Запускаем сервер Django
     * Переходим по адресу /api
     * Открываем приложение auth 
-    * ![alt text](imageforreadme/auth.png)
+      ![alt text](imageforreadme/auth.png)
     * Кликаем на метод создания токена и вводим свои данные
-    * ![alt text](imageforreadme/create_token.png)
+      ![alt text](imageforreadme/create_token.png)
     * Копируем access токен из результата запроса
-    * ![alt text](imageforreadme/response_auth.png)
+      ![alt text](imageforreadme/response_auth.png)
     * В нижнем левом углу нажимаем на вкладку Authentication и нажимаем на token
-    * ![alt text](imageforreadme/auth_app.png)
+      ![alt text](imageforreadme/auth_app.png)
     * Записываем в поле Scheme - Bearer, а в поле Token вставляем скопированный токен
-    * ![alt text](imageforreadme/token.png)
+      ![alt text](imageforreadme/token.png)
 
 3. Проверка IMEI через Telegram бота
     * Запускаем бота по инструкции выше
