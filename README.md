@@ -2,7 +2,7 @@
 Телеграм бот IMEI
 ![GitHub top language](https://img.shields.io/github/languages/top/Mike0001-droid/CheckImeiWithDRFAndTelegram)
 
-<!--Установка-->
+
 ## Установка 
 У вас должны быть установлены [зависимости проекта](https://github.com/Mike0001-droid/CheckImeiWithDRFAndTelegram/blob/main/requirements.txt)
 
@@ -22,17 +22,22 @@
 
 ```pip install -r requirements.txt```
 
-5. Запуск миграций
+5. Заполнение файла .env
+   * Файл .env предназначен для хранения переменных окружения и должен выглядеть примерно так
+     ![alt text](imageforreadme/env_example.png)
+
+6. Запуск миграций
 
 ```python manage.py migrate```
 
-6. Создание админа
+7. Создание админа
 
 ```python manage.py createsuperuser```
 
-7. Запуск сервера
+8. Запуск сервера
 
 ```python manage.py runserver```
+
 
 ## Запуск бота
 
@@ -50,27 +55,30 @@
 1. Проверка IMEI через API DRF 
     * Запускаем сервер Django
     * Переходим по адресу /api
-    * Открываем приложение check 
+    * Открываем приложение check и нажимаем зеленую кнопку Interact
       ![alt text](imageforreadme/checkimei.png)
-    * Вставляем IMEI в форму
+    * Вставляем IMEI в форму и нажимаем синюю кнопку Send Request
       ![alt text](imageforreadme/send_request.png)
 
 2. Авторизация по JWT - токену
     * Запускаем сервер Django
     * Переходим по адресу /api
-    * Открываем приложение auth 
+    * Открываем приложение auth и нажимаем зеленую кнопку Interact
       ![alt text](imageforreadme/auth.png)
-    * Кликаем на метод создания токена и вводим свои данные
+    * Кликаем на метод создания токена, вводим свои данные и нажимаем синюю кнопку Send Request
       ![alt text](imageforreadme/create_token.png)
     * Копируем access токен из результата запроса
       ![alt text](imageforreadme/response_auth.png)
     * В нижнем левом углу нажимаем на вкладку Authentication и нажимаем на token
       ![alt text](imageforreadme/auth_app.png)
-    * Записываем в поле Scheme - Bearer, а в поле Token вставляем скопированный токен
+    * Записываем в поле Scheme - Bearer, а в поле Token вставляем скопированный токен, затем нажимаем синюю кнопку Use Token Authentication
       ![alt text](imageforreadme/token.png)
 
 3. Проверка IMEI через Telegram бота
     * Запускаем бота по инструкции выше
+      ![alt text](imageforreadme/run_bot.png)
     * Используем команду /start
+      ![alt text](imageforreadme/tg_start.png)
     * Вводим свой IMEI и получаем результат
+      ![alt text](imageforreadme/tg_result.png)
     
